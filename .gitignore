@@ -1,0 +1,12 @@
+# Lokale Maschinen-Configs (nie ins Repo)
+.zshrc.local
+.env
+*secrets*
+*token*
+*password*
+
+# macOS Kram
+.DS_Store
+
+# tmux Plugin Manager
+tmux/plugins/
