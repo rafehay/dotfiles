@@ -22,7 +22,8 @@ brew install \
   stow \
   git \
   fzf \
-  ripgrep
+  ripgrep \
+  eza
 
 brew install --cask font-jetbrains-mono-nerd-font
 

@@ -21,6 +21,10 @@ sudo apt install -y \
   zsh-autosuggestions \
   zsh-syntax-highlighting
 
+curl -Lo /tmp/eza.tar.gz https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz
+tar xf /tmp/eza.tar.gz -C /tmp
+sudo mv /tmp/eza /usr/local/bin/eza
+
 echo "→ Installiere Nerd Font..."
 mkdir -p ~/.local/share/fonts
 curl -fLo ~/.local/share/fonts/JetBrainsMono.zip \

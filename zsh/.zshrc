@@ -96,9 +96,13 @@ alias gomod="go mod tidy"
 # ─────────────────────────────────────────────
 alias v="nvim"
 alias t="tmux"
-alias ll="ls -la"
 alias reload="source ~/.zshrc"
 alias dotfiles="cd ~/dotfiles"
+
+# eza statt ls
+alias ls="eza --icons"
+alias ll="eza -la --icons --git"
+alias lt="eza --tree --icons --level=2"
 
 # ─────────────────────────────────────────────
 #  STARSHIP PROMPT
