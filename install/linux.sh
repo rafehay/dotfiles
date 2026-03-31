@@ -17,10 +17,16 @@ sudo apt install -y \
   curl \
   fzf \
   ripgrep \
-  bat \
   zsh \
   zsh-autosuggestions \
   zsh-syntax-highlighting
+
+echo "→ Installiere Nerd Font..."
+mkdir -p ~/.local/share/fonts
+curl -fLo ~/.local/share/fonts/JetBrainsMono.zip \
+  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+unzip -o ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/
+fc-cache -fv
 
 echo "→ Installiere Starship (nicht in apt)..."
 curl -sS https://starship.rs/install.sh | sh

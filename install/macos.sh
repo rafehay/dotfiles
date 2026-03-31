@@ -22,9 +22,9 @@ brew install \
   stow \
   git \
   fzf \
-  ripgrep \
-  bat \
-  eza
+  ripgrep
+
+brew install --cask font-jetbrains-mono-nerd-font
 
 echo "→ Symlinks mit Stow setzen..."
 cd ~/dotfiles
