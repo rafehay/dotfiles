@@ -11,3 +11,5 @@ alias t="tmux"
 alias ll="ls -la"
 alias gs="git status"
 alias dotfiles="cd ~/dotfiles"
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
