@@ -1,0 +1,42 @@
+# ~/dotfiles/install/linux.sh
+#!/usr/bin/env bash
+set -e
+
+echo "🐧 Linux Setup startet..."
+
+echo "→ System updaten..."
+sudo apt update && sudo apt upgrade -y
+
+echo "→ Installiere Tools..."
+sudo apt install -y \
+  kitty \
+  tmux \
+  neovim \
+  stow \
+  git \
+  curl \
+  fzf \
+  ripgrep \
+  bat \
+  zsh \
+  zsh-autosuggestions \
+  zsh-syntax-highlighting
+
+echo "→ Installiere Starship (nicht in apt)..."
+curl -sS https://starship.rs/install.sh | sh
+
+echo "→ Wechsle Standard-Shell zu zsh..."
+chsh -s $(which zsh)
+
+echo "→ Symlinks mit Stow setzen..."
+cd ~/dotfiles
+stow zsh kitty tmux starship nvim
+
+echo "→ Erstelle leere .zshrc.local falls nicht vorhanden..."
+[ -f ~/.zshrc.local ] || cat > ~/.zshrc.local << 'EOF'
+# Maschinen-spezifische Configs – wird nicht ins Repo gepusht
+export GIT_AUTHOR_NAME="Dein Name"
+export GIT_AUTHOR_EMAIL="deine@email.com"
+EOF
+
+echo "✅ Linux Setup fertig! Terminal neu starten oder: exec zsh"
