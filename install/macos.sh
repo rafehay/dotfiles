@@ -33,8 +33,8 @@ stow zsh kitty tmux starship nvim
 echo "→ Erstelle leere .zshrc.local falls nicht vorhanden..."
 [ -f ~/.zshrc.local ] || cat > ~/.zshrc.local << 'EOF'
 # Maschinen-spezifische Configs – wird nicht ins Repo gepusht
-export GIT_AUTHOR_NAME="Dein Name"
-export GIT_AUTHOR_EMAIL="deine@email.com"
+export GIT_AUTHOR_NAME="Rafeh Rafeh"
+export GIT_AUTHOR_EMAIL="rafeh.ra@hotmail.com"
 EOF
 
 echo "✅ macOS Setup fertig! Terminal neu starten."
